@@ -1,0 +1,28 @@
+name: Test Trainer CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  repository-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Check repository structure
+        run: |
+          echo "Checking repository structure..."
+          test -f .gitmodules
+          test -d qe-testing-kit
+          echo "Repository structure is valid."
+
+      - name: Show submodule status
+        run: |
+          git submodule status
