@@ -26,3 +26,32 @@ jobs:
       - name: Show submodule status
         run: |
           git submodule status
+
+  saucedemo-playwright-python:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: saucedemo-playwright-python
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: |
+          playwright install --with-deps chromium
+
+      - name: Run tests
+        run: |
+          pytest
