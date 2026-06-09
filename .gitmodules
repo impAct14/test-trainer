@@ -1,0 +1,3 @@
+[submodule "qe-testing-kit"]
+	path = qe-testing-kit
+	url = https://github.com/impAct14/qe-testing-kit.git
