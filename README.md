@@ -44,7 +44,6 @@ test-trainer/
 | `qe-testing-kit/` | External QA/QE reference toolkit added as a Git submodule |
 | `manual-practice/` | Manual testing practice materials |
 | `saucedemo-playwright-python/` | Planned Playwright Python automation demo project |
-| `interview-notes/` | QA/QE interview preparation notes |
 
 ---
 
