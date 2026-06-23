@@ -30,7 +30,6 @@ test-trainer/
 ├── qe-testing-kit/
 ├── manual-practice/
 ├── saucedemo-playwright-python/
-├── interview-notes/
 ├── .gitmodules
 └── README.md
 ```
